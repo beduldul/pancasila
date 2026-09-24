@@ -5,7 +5,7 @@ import { prisma } from '../index';
  * Runs every 24 hours to delete ActivityLogs older than 30 days.
  */
 export const startCleanupWorker = () => {
-    console.log('🧹 Cleanup Worker started: Log Retention Policy (30 days) active.');
+    console.log('Cleanup worker started: log retention policy (30 days) active.');
     
     // Run immediately on start
     runCleanup();

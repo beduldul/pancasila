@@ -41,7 +41,7 @@ export default function MaterialDetail() {
       await api.post(`/portal/progress/${material.id}`, { progress: 100, isCompleted: true })
     },
     onSuccess: () => {
-      toast.success('Luar biasa! Materi ini telah diselesaikan 🎉')
+      toast.success('Luar biasa! Materi ini telah diselesaikan.')
       queryClient.invalidateQueries(['material', slug])
       queryClient.invalidateQueries(['user-progress'])
     },

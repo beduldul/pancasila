@@ -20,14 +20,14 @@ export default function TapakLiman() {
   ]
 
   const acronym = [
-    { char: 'T', word: 'Tanggap', desc: 'Peka dan sigap dalam merespons isu kemানুsaan serta dinamika sosial di lapangan.', icon: '👣', bg: 'from-red-50 to-white border-red-100 text-red-600' },
-    { char: 'A', word: 'Adaptif', desc: 'Lincah menyesuaikan diri dengan kultur dan kearifan lokal warga desa mitra.', icon: '🦎', bg: 'from-slate-50 to-white border-slate-200 text-slate-700' },
-    { char: 'P', word: 'Partisipatif', desc: 'Merangkul peran serta aktif dan kolaboratif dari seluruh lapisan masyarakat.', icon: '🤝', bg: 'from-red-50 to-white border-red-100 text-red-600' },
-    { char: 'A', word: 'Aksi Nyata', desc: 'Menghadirkan solusi konkret yang berdaya guna secara fisik maupun edukatif.', icon: '⚡', bg: 'from-slate-50 to-white border-slate-200 text-slate-700' },
-    { char: 'K', word: 'Kolaboratif', desc: 'Membangun sinergi kelompok lintas program studi secara harmonis.', icon: '💎', bg: 'from-red-50 to-white border-red-100 text-red-600' },
-    { char: 'L', word: 'Lintas Ilmu', desc: 'Meleburkan sains, seni rupa desain, dan sosial-humaniora dalam pemecahan masalah.', icon: '🧩', bg: 'from-slate-50 to-white border-slate-200 text-slate-700' },
-    { char: 'I', word: 'Inisiatif', desc: 'Mendorong daya cipta mandiri yang kreatif, solutif, dan efisien.', icon: '💡', bg: 'from-red-50 to-white border-red-100 text-red-600' },
-    { char: 'M', word: 'Nasionalis', desc: 'Dijiwai kecintaan mendalam pada tanah air berlandaskan ideologi Pancasila.', icon: '🇲🇨', bg: 'from-slate-50 to-white border-slate-200 text-slate-700' },
+    { char: 'T', word: 'Tanggap', desc: 'Peka dan sigap dalam merespons isu kemানুsaan serta dinamika sosial di lapangan.', icon: '', bg: 'from-red-50 to-white border-red-100 text-red-600' },
+    { char: 'A', word: 'Adaptif', desc: 'Lincah menyesuaikan diri dengan kultur dan kearifan lokal warga desa mitra.', icon: '', bg: 'from-slate-50 to-white border-slate-200 text-slate-700' },
+    { char: 'P', word: 'Partisipatif', desc: 'Merangkul peran serta aktif dan kolaboratif dari seluruh lapisan masyarakat.', icon: '', bg: 'from-red-50 to-white border-red-100 text-red-600' },
+    { char: 'A', word: 'Aksi Nyata', desc: 'Menghadirkan solusi konkret yang berdaya guna secara fisik maupun edukatif.', icon: '', bg: 'from-slate-50 to-white border-slate-200 text-slate-700' },
+    { char: 'K', word: 'Kolaboratif', desc: 'Membangun sinergi kelompok lintas program studi secara harmonis.', icon: '', bg: 'from-red-50 to-white border-red-100 text-red-600' },
+    { char: 'L', word: 'Lintas Ilmu', desc: 'Meleburkan sains, seni rupa desain, dan sosial-humaniora dalam pemecahan masalah.', icon: '', bg: 'from-slate-50 to-white border-slate-200 text-slate-700' },
+    { char: 'I', word: 'Inisiatif', desc: 'Mendorong daya cipta mandiri yang kreatif, solutif, dan efisien.', icon: '', bg: 'from-red-50 to-white border-red-100 text-red-600' },
+    { char: 'M', word: 'Nasionalis', desc: 'Dijiwai kecintaan mendalam pada tanah air berlandaskan ideologi Pancasila.', icon: '', bg: 'from-slate-50 to-white border-slate-200 text-slate-700' },
   ]
 
   const topics = [
@@ -297,7 +297,7 @@ export default function TapakLiman() {
                   className="p-6 rounded-2xl bg-slate-50/50 border border-slate-200/50 hover:bg-white hover:border-slate-350 transition-all duration-300 shadow-sm"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 shadow-sm text-slate-700 flex items-center justify-center font-extrabold text-lg mb-4">
-                    👣
+                    TAPAK
                   </div>
                   <h4 className="font-black text-slate-900 text-sm mb-1.5">TAPAK (Jejak Aksi Kelompok)</h4>
                   <p className="text-[11px] font-bold text-slate-500 leading-relaxed">
@@ -310,7 +310,7 @@ export default function TapakLiman() {
                   className="p-6 rounded-2xl bg-slate-50/50 border border-slate-200/50 hover:bg-white hover:border-slate-350 transition-all duration-300 shadow-sm"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 shadow-sm text-slate-700 flex items-center justify-center font-extrabold text-lg mb-4">
-                    🐘
+                    LIMAN
                   </div>
                   <h4 className="font-black text-slate-900 text-sm mb-1.5">LIMAN (Gajah Ganesha)</h4>
                   <p className="text-[11px] font-bold text-slate-500 leading-relaxed">
@@ -366,7 +366,7 @@ export default function TapakLiman() {
                     exit={{ opacity: 0, y: -5 }}
                     className="text-center"
                   >
-                    <span className="text-xl mb-1 block">{acronym[activeLetter].icon}</span>
+                    <span className="text-xl mb-1 block">{acronym[activeLetter].char}</span>
                     <p className="text-[11px] font-bold text-slate-600 leading-relaxed">
                       <strong>{acronym[activeLetter].word}</strong>: {acronym[activeLetter].desc}
                     </p>
@@ -376,7 +376,7 @@ export default function TapakLiman() {
             </motion.div>
           </div>
 
-          {/* ================= 10 TOPIK SDGs - THE ULTIMATE HUB ================= */}
+          {/* 10 topik SDGs */}
           <div className="mb-24">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-50 border border-red-100 text-red-600 text-[9px] font-black uppercase tracking-widest mb-3">
@@ -402,7 +402,7 @@ export default function TapakLiman() {
                 >
                   <div className="flex items-center justify-between w-full">
                     <span className="text-[9px] font-black px-2 py-0.5 rounded bg-slate-100 text-slate-500">TOPIK {t.no}</span>
-                    {t.icon}
+                    {t.char}
                   </div>
                   
                   <div>
@@ -469,7 +469,7 @@ export default function TapakLiman() {
                   <div className="p-4 bg-slate-50 border border-slate-200/80 rounded-2xl flex items-start gap-3">
                     <AlertCircle size={16} className="text-red-600 shrink-0 mt-0.5" />
                     <p className="text-[11px] font-bold text-slate-700 leading-snug">
-                      📌 <strong>Pedoman Proposal:</strong> Draf Rincian Anggaran Biaya (RAB) kelompok harus melampirkan tanda tangan persetujuan dosen pembimbing lapangan sebelum implementasi.
+                      <strong>Pedoman Proposal:</strong> Draf Rincian Anggaran Biaya (RAB) kelompok harus melampirkan tanda tangan persetujuan dosen pembimbing lapangan sebelum implementasi.
                     </p>
                   </div>
                 </motion.div>

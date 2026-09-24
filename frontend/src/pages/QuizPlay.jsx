@@ -57,7 +57,7 @@ export default function QuizPlay() {
         const newCount = prev + 1
         if (newCount <= 3) {
           toast.error(`Peringatan Keras: Jangan keluar dari tab ujian! (${newCount}/3 pelanggaran)`, {
-            icon: '⚠️',
+            icon: '',
             duration: 4000
           })
         }

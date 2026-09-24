@@ -55,7 +55,7 @@ export default function AdminFeedbackMaintenance() {
         maintenanceMode,
         maintenanceMsg,
       })
-      toast.success('Pengaturan sistem berhasil diperbarui! 🛠️')
+      toast.success('Pengaturan sistem berhasil diperbarui.')
       queryClient.invalidateQueries(['admin-system-config'])
       queryClient.invalidateQueries(['system-config-public'])
     } catch (err) {

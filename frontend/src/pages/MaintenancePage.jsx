@@ -56,7 +56,7 @@ export default function MaintenancePage({ message }) {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-xl w-full text-center relative z-10"
       >
-        {/* Beautiful Elegant White Card */}
+        {/* Kartu putih */}
         <div 
           className="bg-white rounded-[2.5rem] p-10 sm:p-12 border shadow-lg text-center"
           style={{ 
@@ -112,7 +112,7 @@ export default function MaintenancePage({ message }) {
 
           {/* Friendly Status Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-50 border border-amber-100/50 text-[11px] font-bold text-amber-800">
-            <span>Terima kasih atas kesabaranmu, Sobat Pancasila! 🇮🇩</span>
+            <span>Terima kasih atas kesabaranmu, Sobat Pancasila.</span>
           </div>
         </div>
       </motion.div>

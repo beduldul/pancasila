@@ -62,7 +62,7 @@ app.use(cors({
     if (!origin || allowedOrigins.includes(origin) || !IS_PROD || isTrustedVercel) {
       callback(null, true);
     } else {
-      console.warn(`⚠️ CORS Blocked: ${origin}`);
+      console.warn(`CORS blocked: ${origin}`);
       callback(new Error('Not allowed by CORS'));
     }
   },
@@ -106,7 +106,7 @@ app.use(errorHandler);
 const server = app.listen(config.PORT, () => {
   const dbType = config.DATABASE_URL.startsWith('postgres') ? 'PostgreSQL (Cloud)' : 'SQLite (Local)';
   console.log(`
-🚀 Pancasila Edu API is running!
+Pancasila Edu API is running!
 ----------------------------------
 Environment : ${config.NODE_ENV}
 Port        : ${config.PORT}

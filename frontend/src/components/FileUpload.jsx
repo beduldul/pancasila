@@ -104,7 +104,7 @@ export default function FileUpload({
         throw new Error('Respons Cloudinary tidak valid')
       }
     } catch (err) {
-      console.error('❌ Direct Upload error:', err)
+      console.error('Direct upload error:', err)
       const errorMsg = err.response?.data?.error?.message || 
                        err.response?.data?.error || 
                        err.message || 

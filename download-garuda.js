@@ -14,7 +14,7 @@ https.get(options, (res) => {
   res.pipe(file);
   file.on('finish', () => {
     file.close();
-    console.log("Download perfect SVG complete.");
+    console.log("Downloaded the Garuda SVG.");
   });
 }).on('error', (err) => {
   console.error("Error: ", err.message);

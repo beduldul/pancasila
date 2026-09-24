@@ -32,7 +32,7 @@ export default function Register() {
     setLoading(true)
     try {
       await register(name, email, password)
-      toast.success('Akun berhasil dibuat! Selamat belajar 🎉')
+      toast.success('Akun berhasil dibuat! Selamat belajar.')
       
       // Attempt standard navigation
       navigate('/dashboard')

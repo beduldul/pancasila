@@ -301,7 +301,7 @@ class RootErrorBoundary extends React.Component {
               <AlertTriangle size={40} />
             </div>
             <h1 className="text-2xl font-black text-slate-900 mb-2 tracking-tight">
-              ⚠️ KRITIKAL ERROR:
+              KRITIKAL ERROR:
             </h1>
             <h2 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">
               Sistem Terhenti

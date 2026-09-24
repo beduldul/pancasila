@@ -180,7 +180,7 @@ export default function CommandPalette({ isOpen, onClose }) {
             <div className="p-4 bg-slate-50 border-t border-slate-100 hidden md:flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-1 text-[10px] font-bold text-slate-400">
-                  <span className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-slate-900">↑↓</span>
+                  <span className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-slate-900">UP/DOWN</span>
                   <span>Navigasi</span>
                 </div>
                 <div className="flex items-center gap-1 text-[10px] font-bold text-slate-400">

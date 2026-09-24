@@ -53,7 +53,7 @@ export class DiscussionController {
       throw new AppError(404, 'Komentar tidak ditemukan');
     }
 
-    // 🔐 Comment Deletion Ownership & Moderation Validation
+    // Comment deletion ownership & moderation validation
     const isStaff = req.user!.role === 'ADMIN' || req.user!.role === 'TUTOR';
     const isOwner = comment.userId === req.user!.userId;
     if (!isOwner && !isStaff) {

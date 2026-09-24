@@ -15,9 +15,9 @@ export const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
-  console.error('❌ Error:', {
+  console.error('Error:', {
     message: err.message,
-    stack: IS_PROD ? '🥞' : err.stack,
+    stack: IS_PROD ? 'hidden' : err.stack,
     path: req.path,
     method: req.method,
   });

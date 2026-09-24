@@ -158,7 +158,7 @@ export class QuizController {
     
     if (!quiz) throw new AppError(404, 'Kuis tidak ditemukan');
 
-    // 🔐 JWT-Based Time-Drift & Anti-Cheat Validation
+    // JWT-based time-drift & anti-cheat validation
     if (!startToken) {
       throw new AppError(400, 'Sesi mulai kuis tidak sah. Harap mulai kuis dari tombol resmi.');
     }

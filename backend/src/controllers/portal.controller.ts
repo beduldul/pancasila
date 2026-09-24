@@ -133,7 +133,7 @@ export class PortalController {
       return res.json([]);
     }
 
-    // 🔐 Search Query Security Hardening
+    // Search query security hardening
     // 1. Cap query length to prevent Denial of Service (DoS) from massive inputs
     if (query.length > 100) {
       query = query.substring(0, 100);

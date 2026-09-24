@@ -15,9 +15,9 @@ if (isCloudinaryConfigured) {
     api_key: config.CLOUDINARY_API_KEY,
     api_secret: config.CLOUDINARY_API_SECRET,
   });
-  console.log('☁️  Cloud Storage: Cloudinary successfully configured and initialized!');
+  console.log('Cloud Storage: Cloudinary configured and initialized.');
 } else {
-  console.log('💾 Cloud Storage: Credentials missing. Falling back to local/ephemeral disk storage.');
+  console.log('Cloud Storage: credentials missing, falling back to local/ephemeral disk storage.');
 }
 
 export class StorageService {
@@ -66,7 +66,7 @@ export class StorageService {
 
     if (isCloudinaryConfigured) {
       try {
-        console.log(`📤 Cloud Storage: Uploading ${file.originalname} (${file.size} bytes) to Cloudinary...`);
+        console.log(`Cloud Storage: uploading ${file.originalname} (${file.size} bytes) to Cloudinary...`);
         
         const result = await cloudinary.uploader.upload(tempFilePath, {
           folder,
@@ -74,18 +74,18 @@ export class StorageService {
           public_id: `${Date.now()}-${file.originalname.replace(/[^a-zA-Z0-9.-]/g, '_')}`.split('.')[0]
         });
 
-        // 🧹 Clean up ephemeral local temp file to avoid Vercel /tmp congestion
+        // Clean up ephemeral local temp file to avoid Vercel /tmp congestion
         if (fs.existsSync(tempFilePath)) {
           fs.unlinkSync(tempFilePath);
-          console.log(`🧹 Cloud Storage: Cleaned up local temp file: ${tempFilePath}`);
+          console.log(`Cloud Storage: cleaned up local temp file: ${tempFilePath}`);
         }
 
-        console.log(`✅ Cloud Storage: Upload successful! Permanent URL: ${result.secure_url}`);
+        console.log(`Cloud Storage: upload successful, permanent URL: ${result.secure_url}`);
         return result.secure_url;
       } catch (error: any) {
-        console.error('❌ Cloud Storage Error during upload:', error);
+        console.error('Cloud Storage error during upload:', error);
         // Fallback to local url if upload fails, to avoid breaking user experience
-        console.warn('⚠️ Cloud Storage: Falling back to local static URL due to upload error.');
+        console.warn('Cloud Storage: falling back to local static URL due to upload error.');
         return `/uploads/${file.filename}`;
       }
     }

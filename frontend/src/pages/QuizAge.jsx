@@ -109,7 +109,7 @@ export default function QuizAge() {
                 <span className="text-[10px] font-black uppercase tracking-widest" style={{ color: config.accent }}>{rangeInfo.title}</span>
               </div>
               <p className="text-xs font-bold uppercase tracking-[0.3em] mb-3" style={{ color: config.accent }}>
-                ✦ {rangeInfo.title} &nbsp;·&nbsp; {rangeInfo.desc}
+                {rangeInfo.title} &nbsp;·&nbsp; {rangeInfo.desc}
               </p>
               <h1 className="font-black tracking-tight leading-none mb-5"
                 style={{ fontSize: 'clamp(2.8rem, 7vw, 4.5rem)', color: 'var(--edu-text)', fontFamily: '"Plus Jakarta Sans", sans-serif' }}>

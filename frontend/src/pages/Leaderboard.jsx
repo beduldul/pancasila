@@ -186,7 +186,7 @@ export default function Leaderboard() {
                   <div className="py-3 text-center">
                     <p className="text-xs text-slate-400 mb-3">Login untuk melihat posisimu</p>
                     <Link to="/login" className="text-xs font-black text-amber-600 hover:text-amber-700 transition-colors">
-                      Masuk Sekarang →
+                      Masuk Sekarang &rarr;
                     </Link>
                   </div>
                 )}

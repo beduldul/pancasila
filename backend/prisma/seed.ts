@@ -4,33 +4,33 @@ import bcrypt from 'bcryptjs';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Seeding database with high-quality academic curriculum...');
+  console.log('Seeding database with the academic curriculum...');
 
-  // 1. Create or update Categories with beautiful, harmonized colors
+  // 1. Create or update categories with harmonized colors
   const categories = await Promise.all([
     prisma.category.upsert({
       where: { slug: 'matematika' },
       update: {},
-      create: { name: 'Matematika', slug: 'matematika', icon: '📐', color: '#0071e3', order: 1 },
+      create: { name: 'Matematika', slug: 'matematika', icon: '', color: '#0071e3', order: 1 },
     }),
     prisma.category.upsert({
       where: { slug: 'ipa' },
       update: {},
-      create: { name: 'Ilmu Pengetahuan Alam', slug: 'ipa', icon: '🔬', color: '#34c759', order: 2 },
+      create: { name: 'Ilmu Pengetahuan Alam', slug: 'ipa', icon: '', color: '#34c759', order: 2 },
     }),
     prisma.category.upsert({
       where: { slug: 'ips' },
       update: {},
-      create: { name: 'Ilmu Pengetahuan Sosial', slug: 'ips', icon: '🌍', color: '#ff9500', order: 3 },
+      create: { name: 'Ilmu Pengetahuan Sosial', slug: 'ips', icon: '', color: '#ff9500', order: 3 },
     }),
     prisma.category.upsert({
       where: { slug: 'ppkn' },
       update: {},
-      create: { name: 'Pendidikan Pancasila', slug: 'ppkn', icon: '🦅', color: '#e63946', order: 4 },
+      create: { name: 'Pendidikan Pancasila', slug: 'ppkn', icon: '', color: '#e63946', order: 4 },
     }),
   ]);
 
-  console.log('✅ Categories created successfully');
+  console.log('Categories created.');
 
   // 2. Create users (Admin & Guru/Tutor)
   const hashedPassword = await bcrypt.hash('admin123', 12);
@@ -46,7 +46,7 @@ async function main() {
     create: { email: 'tutor@pancasila.edu', password: hashedPassword, name: 'Guru Pancasila', role: 'TUTOR' },
   });
 
-  console.log('✅ Users verified');
+  console.log('Users verified.');
 
   // 3. Define professional academic materials
   const materials = [
@@ -286,7 +286,7 @@ Acara dilanjutkan dengan pengibaran bendera pusaka **Merah Putih** yang telah di
   ];
 
   // Clean up and update materials to avoid stale duplicates
-  console.log('🧹 Updating database materials...');
+  console.log('Updating database materials...');
   await prisma.material.deleteMany({
     where: { slug: { in: materials.map(m => m.slug) } }
   });
@@ -295,7 +295,7 @@ Acara dilanjutkan dengan pengibaran bendera pusaka **Merah Putih** yang telah di
     await prisma.material.create({ data: mat });
   }
 
-  console.log('✅ Academic Materials populated successfully');
+  console.log('Academic materials populated.');
 
   // 4. Define highly challenging, curriculum-aligned Quizzes and Questions
   const quizzes = [
@@ -586,7 +586,7 @@ Acara dilanjutkan dengan pengibaran bendera pusaka **Merah Putih** yang telah di
   ];
 
   // Clean up and update quizzes to avoid duplicates and allow fresh seeding of new questions
-  console.log('🧹 Cleaning old quizzes for updated questions...');
+  console.log('Cleaning old quizzes for updated questions...');
   await prisma.quiz.deleteMany({
     where: { slug: { in: quizzes.map(q => q.slug) } }
   });
@@ -621,18 +621,18 @@ Acara dilanjutkan dengan pengibaran bendera pusaka **Merah Putih** yang telah di
     });
   }
 
-  console.log('✅ Academic Quizzes and Questions populated successfully');
+  console.log('Academic quizzes and questions populated.');
 
   // 5. Create organic Gamification achievements
   const achievements = [
-    { name: 'Pemula', description: 'Selesaikan 1 kuis', icon: '🌱', points: 10, criteria: JSON.stringify({ type: 'QUIZZES_COMPLETED', count: 1 }) },
-    { name: 'Pelajar', description: 'Selesaikan 5 kuis', icon: '📚', points: 50, criteria: JSON.stringify({ type: 'QUIZZES_COMPLETED', count: 5 }) },
-    { name: 'Ahli', description: 'Selesaikan 10 kuis', icon: '🏆', points: 100, criteria: JSON.stringify({ type: 'QUIZZES_COMPLETED', count: 10 }) },
-    { name: 'Konsisten', description: 'Login 3 hari berturut-turut', icon: '🔥', points: 30, criteria: JSON.stringify({ type: 'STREAK_DAYS', count: 3 }) },
-    { name: 'Pembaca', description: 'Selesaikan 1 materi', icon: '📖', points: 10, criteria: JSON.stringify({ type: 'MATERIALS_COMPLETED', count: 1 }) },
+    { name: 'Pemula', description: 'Selesaikan 1 kuis', icon: '', points: 10, criteria: JSON.stringify({ type: 'QUIZZES_COMPLETED', count: 1 }) },
+    { name: 'Pelajar', description: 'Selesaikan 5 kuis', icon: '', points: 50, criteria: JSON.stringify({ type: 'QUIZZES_COMPLETED', count: 5 }) },
+    { name: 'Ahli', description: 'Selesaikan 10 kuis', icon: '', points: 100, criteria: JSON.stringify({ type: 'QUIZZES_COMPLETED', count: 10 }) },
+    { name: 'Konsisten', description: 'Login 3 hari berturut-turut', icon: '', points: 30, criteria: JSON.stringify({ type: 'STREAK_DAYS', count: 3 }) },
+    { name: 'Pembaca', description: 'Selesaikan 1 materi', icon: '', points: 10, criteria: JSON.stringify({ type: 'MATERIALS_COMPLETED', count: 1 }) },
   ];
 
-  console.log('🧹 Updating achievements...');
+  console.log('Updating achievements...');
   await prisma.achievement.deleteMany({
     where: { name: { in: achievements.map(a => a.name) } }
   });
@@ -641,7 +641,7 @@ Acara dilanjutkan dengan pengibaran bendera pusaka **Merah Putih** yang telah di
     await prisma.achievement.create({ data: achievement });
   }
 
-  console.log('✅ Achievements populated successfully');
+  console.log('Achievements populated.');
 
   // 6. Broadcast Welcome Announcement
   await prisma.announcement.upsert({
@@ -656,15 +656,15 @@ Acara dilanjutkan dengan pengibaran bendera pusaka **Merah Putih** yang telah di
     },
   });
 
-  console.log('\n🎉 Comprehensive database seeding completed successfully!\n');
-  console.log('📝 Sample accounts available:');
+  console.log('\nDatabase seeding completed.\n');
+  console.log('Sample accounts available:');
   console.log('   Admin: admin@pancasila.edu / admin123');
   console.log('   Tutor: tutor@pancasila.edu / admin123');
 }
 
 main()
   .catch((e) => {
-    console.error('❌ Seeding failed with error:', e);
+    console.error('Seeding failed:', e);
     process.exit(1);
   })
   .finally(async () => {

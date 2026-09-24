@@ -346,10 +346,10 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { cat: 'Matematika', emoji: '📐', count: 12, color: 'var(--edu-navy)', bg: '#E3EEFF' },
-              { cat: 'Fisika', emoji: '⚡', count: 8, color: '#9B7210', bg: '#FEF8E7' },
-              { cat: 'Kimia', emoji: '🧪', count: 10, color: '#1E8449', bg: '#EAFAF1' },
-              { cat: 'Biologi', emoji: '🧬', count: 9, color: 'var(--edu-red)', bg: '#FDECEA' },
+              { cat: 'Matematika', emoji: '', count: 12, color: 'var(--edu-navy)', bg: '#E3EEFF' },
+              { cat: 'Fisika', emoji: '', count: 8, color: '#9B7210', bg: '#FEF8E7' },
+              { cat: 'Kimia', emoji: '', count: 10, color: '#1E8449', bg: '#EAFAF1' },
+              { cat: 'Biologi', emoji: '', count: 9, color: 'var(--edu-red)', bg: '#FDECEA' },
             ].map((item, i) => (
               <motion.div
                 key={item.cat}

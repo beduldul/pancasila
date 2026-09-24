@@ -68,7 +68,7 @@ export default function Books() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-slate-500 mb-3">
-                ✦ Literasi Digital &nbsp;·&nbsp; {books.length} Koleksi
+                Literasi Digital &nbsp;·&nbsp; {books.length} Koleksi
               </p>
               <h1 className="font-black tracking-tight leading-none mb-5"
                 style={{ fontSize: 'clamp(2.8rem, 7vw, 5rem)', color: 'var(--edu-text)', fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
@@ -214,7 +214,7 @@ export default function Books() {
                           <button onClick={() => handleRead(book)}
                             className="text-[10px] font-black uppercase tracking-widest text-slate-900 hover:text-red-600 transition-colors flex items-center gap-1 group/btn">
                             Baca
-                            <span className="group-hover/btn:translate-x-0.5 transition-transform inline-block">→</span>
+                            <span className="group-hover/btn:translate-x-0.5 transition-transform inline-block">&rarr;</span>
                           </button>
                         </div>
                       </div>

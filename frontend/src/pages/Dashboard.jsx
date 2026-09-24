@@ -51,7 +51,7 @@ export default function Dashboard() {
         broadcastPriority: active ? parseInt(broadcastPriorityInput) : 0
       })
       
-      toast.success(active ? 'Pengumuman Global Berhasil Disiarkan! 📣' : 'Pengumuman Global Telah Dihentikan! 🛑')
+      toast.success(active ? 'Pengumuman global berhasil disiarkan.' : 'Pengumuman global telah dihentikan.')
       refetchConfig()
     } catch {
       toast.error('Gagal memperbarui pengumuman global')
@@ -156,10 +156,10 @@ export default function Dashboard() {
         if (pinInput === '170317') {
           sessionStorage.setItem('admin_pin_verified', 'true');
           setPinVerified(true);
-          toast.success('AUTHORIZATION GRANTED. WELCOME BACK OPERATOR 🔑');
+          toast.success('Akses admin diberikan. Selamat datang kembali.');
         } else {
           setPinError(true);
-          toast.error('ACCESS DENIED. INVALID SECURITY CODE 🚫');
+          toast.error('Kode keamanan tidak valid.');
           setPinInput('');
           setTimeout(() => setPinError(false), 500);
         }
@@ -207,7 +207,7 @@ export default function Dashboard() {
                         char ? 'border-red-600 bg-red-50/20 text-red-600 scale-[1.03]' : 'border-slate-200 bg-white text-slate-300'
                       }`}
                     >
-                      {char ? '●' : ''}
+                      {char ? '·' : ''}
                     </div>
                   );
                 })}
@@ -230,7 +230,7 @@ export default function Dashboard() {
                 type="submit"
                 className="w-full py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs uppercase tracking-wider transition-all duration-200 active:scale-[0.98] shadow-lg shadow-slate-900/10 mb-3"
               >
-                Unlock Control Console
+                Pusat kendali admin
               </button>
               <p className="text-[10px] font-bold text-slate-400">
                 Use physical keyboard or keypad device to authenticate
@@ -404,7 +404,7 @@ export default function Dashboard() {
                         const link = document.createElement('a'); link.href = url;
                         link.setAttribute('download', 'users.csv'); document.body.appendChild(link);
                         link.click();
-                        toast.success('Laporan Siswa Berhasil Diunduh! 📊');
+                        toast.success('Laporan siswa berhasil diunduh.');
                       } catch { toast.error('Gagal mengekspor laporan') }
                     }}
                     className="flex-1 py-4 px-6 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs uppercase tracking-wider transition-all duration-200 active:scale-[0.98] flex items-center justify-center gap-2 shadow-lg shadow-slate-900/10"
@@ -523,7 +523,7 @@ export default function Dashboard() {
                   <div className="p-4 rounded-2xl bg-red-50 border border-red-100 mb-6 text-left">
                     <div className="flex items-center justify-between mb-1.5">
                       <span className="text-[9px] font-black text-red-600 bg-red-100/50 px-2 py-0.5 rounded uppercase tracking-wider">
-                        Siaran Aktif 📣
+                        Siaran Aktif
                       </span>
                       <span className="text-[9px] font-bold text-slate-400 uppercase">
                         Prioritas: {systemConfigData.broadcastPriority === 2 ? 'Strategis' : systemConfigData.broadcastPriority === 1 ? 'Penting' : 'Info'}
@@ -592,7 +592,7 @@ export default function Dashboard() {
                       {isBroadcasting ? (
                         <Loader2 size={14} className="animate-spin" />
                       ) : (
-                        <>Siarkan Sekarang 📣</>
+                        <>Siarkan Sekarang</>
                       )}
                     </button>
 
@@ -602,7 +602,7 @@ export default function Dashboard() {
                         disabled={isBroadcasting}
                         className="py-3.5 px-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs uppercase tracking-wider transition-all duration-200 active:scale-[0.98] flex items-center justify-center"
                       >
-                        Hentikan 🛑
+                        Hentikan
                       </button>
                     )}
                   </div>
@@ -1044,7 +1044,7 @@ export default function Dashboard() {
               </motion.div>
             )}
 
-            {/* User Feedback Card — Elegant Light-Mode Bento Version */}
+            {/* Kartu masukan pengguna — versi light mode */}
             {user?.role !== 'ADMIN' && user?.role !== 'TUTOR' && (
               <div 
                 className="bg-white rounded-2xl p-6 border transition-all duration-300"
@@ -1145,7 +1145,7 @@ export default function Dashboard() {
                       setSendingFeedback(true);
                       try {
                         await api.post('/discussion/feedback', { content: feedbackText, category: feedbackCategory });
-                        toast.success('Terima kasih atas saran Anda! 🎉');
+                        toast.success('Terima kasih atas saran Anda.');
                         setFeedbackText('');
                       } catch {
                         toast.error('Gagal mengirim pesan, coba lagi.');

@@ -20,7 +20,7 @@ fi
 
 # Create directories
 echo "[1/8] Creating directories..."
-mkdir -p $APP_DIR $LOG_DIR $BACKEND_DIR/uploads
+mkdir -p "$APP_DIR" "$LOG_DIR" "$BACKEND_DIR/uploads" "$DB_DIR"
 
 # Clone or pull code
 echo "[2/8] Syncing code..."

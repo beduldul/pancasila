@@ -1,3 +1,4 @@
+[![shellcheck](https://github.com/beduldul/pancasila/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/beduldul/pancasila/actions/workflows/shellcheck.yml)
 # Proyek Pancasila
 
 Web app dengan backend dan frontend modern, gaya Apple, fokus pada UX, performa, dan kemudahan kolaborasi.

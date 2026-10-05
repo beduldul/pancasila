@@ -23,3 +23,7 @@ Panduan verifikasi:
 - Jalankan frontend: cd frontend, npm install, npm run start
 
 Catatan: Model ini tidak bisa membaca isi PDF secara langsung. Untuk tugas tugas PDF, Anda bisa meng-upload PDF melalui UI Docs, dan backend akan menyimpan file tersebut secara lokal dan menampilkannya pada daftar dokumen.
+
+## License
+
+MIT License — Copyright (c) 2026 Abdul Afif Al Kaysan. See [LICENSE](LICENSE).
